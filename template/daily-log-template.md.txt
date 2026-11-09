@@ -1,0 +1,42 @@
+# Day [NUMBER] — [TOPIC]
+
+**Date:** YYYY-MM-DD
+
+**Learning Focus:** [Python / Machine Learning / RAG / LLMs]
+
+## 1. Today's Objectives
+- What did I plan to learn or build?
+
+## 2. Concepts Studied
+- Concept 1:
+- Concept 2:
+
+## 3. Practical Implementation
+- What code did I write?
+- What experiment did I perform?
+
+## 4. Technical Details
+- Programming Language:
+- Libraries:
+- Frameworks:
+- Tools:
+
+## 5. Problems Encountered
+- 
+
+## 6. Solutions
+- 
+
+## 7. Key Takeaways
+- What did I understand today?
+
+## 8. Progress
+- [ ] Planned
+- [ ] In Progress
+- [ ] Completed
+
+## 9. Next Steps
+- 
+
+## Reflection
+What can I do today that I couldn't do yesterday?
