@@ -1,0 +1,46 @@
+# Day 01 — Python Fundamentals
+
+**Date:** 2026-11-09
+
+**Focus:** Python programming
+
+## 1. Today's Objectives
+- Understand Python functions.
+- Learn function parameters and return values.
+- Practice writing reusable functions.
+
+## 2. Concepts Studied
+- Function declaration.
+- Parameters and arguments.
+- Return statements.
+
+## 3. Practical Implementation
+- Implemented basic Python functions.
+- Practiced passing arguments.
+- Created a simple calculator function.
+
+## 4. Technical Details
+- Language: Python
+- IDE: Notepad / Python
+- Libraries: None
+
+## 5. Problems Encountered
+- Initially confused parameters with return values.
+
+## 6. Solutions
+- Practiced examples to understand the difference.
+
+## 7. Key Takeaways
+- Functions make code reusable and organized.
+
+## 8. Progress
+- [x] Planned
+- [x] In Progress
+- [x] Completed
+
+## 9. Next Steps
+- Learn Python lists and dictionaries.
+- Practice with small programming problems.
+
+## Reflection
+Today I strengthened my Python fundamentals as preparation for Machine Learning and AI engineering.
