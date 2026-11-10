@@ -1,0 +1,15 @@
+i was having difficulties in  setting up github properly so i learned how to  use it properly and connected my laptop with github so that i can easily push projects and track my journey.
+
+after that i have revised OOPS CONCEPTS did practice coding  without using AI.
+
+I think when we are learning things we have to do things the old way like writing code manually checking errors and fixing bugs .
+so far i understand
+1.classes 
+2.objects
+3.attributes
+4.self and --init--()
+5.writing basic data classes 
+6.did some excercises 
+and finally pushiing it to github.
+
+Thats all for day 2..
