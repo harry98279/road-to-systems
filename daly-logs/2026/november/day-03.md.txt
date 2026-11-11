@@ -1,0 +1,80 @@
+Todays learning 
+
+https request 
+methods 
+urls 
+headers
+body
+
+https response
+staus code
+response body 
+headers
+
+SOME COMMON STATUS CODE
+200 \ ok
+201 \ created 
+400 \ bad request
+403 \ forbidden
+404 \ not found 
+
+JSON :
+
+COMMON DATA FORMATS USED BY  API.
+
+example:
+
+{
+  "name' : "ali",
+  "age" : 22,
+  "skills" :["python","sql","ai'] 
+
+}
+
+
+
+THE FRAMEWORK:
+
+         CLIENT
+           |
+         HTTTP REQUEST
+           |
+         API SERVER
+           |
+         APPLICATION LOGIC
+           |
+         HTTP RESPONSE
+           |
+         CLIENT
+
+REST:
+
+IT ORGANIZES API AROUND RESOURCES.
+
+like a banking system 
+/customer
+/accounts
+/loans
+
+
+get /customer
+get/loans
+
+
+e.g 
+get/accounts/123
+means give me accounts 123..
+
+FAT API:
+it automatically provides interactive api documentations.
+
+PYDANTIC:
+instead of accepting uncontrolled data define  what your API expects..
+
+like a client sends some data pydantic validates the struvture that is coming.
+
+
+thats it for today completely exhausted now , today i have done alot of things but didnt want to skip a day .
+i did good today.   :)
+
+
