@@ -1,0 +1,43 @@
+TODAY:
+           SQL AND POSTGRESQL
+
+
+1.database :stores and organizes information.
+2.relational database stores information in tables .
+3.sql: its a language.
+4.postgresql : database management system.
+5.insert int : to insert values into tables.
+6.select ;  select tables
+7.select coloumn name : to select specific tables.
+8.where : condition 
+9.where or ; multiple conditions
+10.like; search patterns.
+11.order by:sorting in ascending or descending order.
+12.update: update values
+13.delete : to delte a specific row ,coloumn or tables.
+14.aggregate functions : min , max ,sum ,avg ,
+15.group by : if we want to count customer per city we can use it .
+16: where filter individual rows,having filters groups
+17.joins: if we want to combine accounts and customers we can use it.
+18.inner join : only matchinng records.
+19.left joins: all customers are returned even if they dont have an account .
+20.rght joins: all records from right tables and matching record from left.
+
+
+some basic query 
+CREATE TABLE customerss(
+  id integer PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR (100) ,
+  city VARCHAR (100),
+	age INTEGER
+);
+
+INSERT INTO customerss(id ,name ,email,city,age)
+VALUES
+(1,'Haris','hariskaimkhanui','hyd',22)
+
+SELECT * FROM customerss
+WHERE city = 'hyd'
+
+
