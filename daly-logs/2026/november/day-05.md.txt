@@ -1,0 +1,20 @@
+ today i was too busy to give proper time to my craft but still documenting it because i dont wanna skip the
+the day .
+
+just learned the definiton of machine learning techniques like 
+
+
+1.supervised
+2.unsupervised.
+3semi-supervised.
+4.reinforcemnet
+5.deep
+6.transfer
+7.ensemble
+
+
+whats the role of ML engineerss?
+Machine learning engineers transform raw data gathered from various data pipelines into scalable data science models.
+They connect structured data to the models defined by data scientists.
+
+thats it for day 5. :)
