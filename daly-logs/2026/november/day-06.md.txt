@@ -1,0 +1,13 @@
+today i will start building a project ,
+will be documenting that in the projects folder and also talking about it here because  i have to login  here daily to
+bascially know my progress.
+
+
+Today's learning
+Understand these five financial terms. We will use them throughout development.
+Term	Simple meaning
+Revenue	Money earned from sales
+EBITDA	Operating earnings before interest, taxes, depreciation and amortisation
+Assets	What a business owns or controls
+Liabilities	What a business owes
+Equity	Owners' residual interest in the business
