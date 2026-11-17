@@ -1,0 +1,46 @@
+coding practices
+
+```
+score= {"Ali": -5 , "Sara": -2, "Omar": -3}
+def top_student(score):
+  best_score = best_name[score]
+  best_name = list(score)[0]
+
+  for name in score :
+    if best_score < score[name]:
+      best_score = score[name]
+      best_name = name
+  return best_name
+
+print(top_student(score))
+```
+
+
+text = "the cat and the dog"
+text = "the cat and the dog"
+
+def count_words(text):
+    counts = {}
+    for word in text.split():
+        if word in counts:
+            counts[word] = counts[word] + 1
+        else:
+          
+            counts[word] = 1
+    return counts
+
+print(count_words(text))
+
+
+
+
+
+class Student :
+  def __init__(self,name ,score):
+    self.name = name 
+    self.score = score
+  def passed(self):
+    return self.score >= 50
+
+s=Student("haris",76)
+print(s.passed())
