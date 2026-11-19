@@ -68,7 +68,22 @@ print(data["tags"][1])
 text = json.dumps(data)        
 
 
+users = [
+    {"name": "Ali", "score": 72},
+    {"name": "Sara", "score": 91},
+    {"name": "Omar", "score": 40},
+    {"name": "Zain", "score": 95},
+]
+def top_names(users):
+    toppers = []
+    for name in users:
+       if name['score'] >= 90:
+         toppers.append(name['name'])
+    print(toppers)
+       
+top_names(users)
 
+  
 
 
 
