@@ -1,0 +1,45 @@
+sick as hell.
+
+
+query = np.array([1, 1, 0])    # asks about topics 1 and 2
+doc1  = np.array([1, 1, 1])
+doc2  = np.array([0, 0, 1])
+
+
+query = [1, 1, 0]
+doc2  = [0, 0, 1]
+
+
+docs = np.array([
+    [1, 1, 1],    # doc1
+    [0, 0, 1],    # doc2
+    [1, 0, 0],    # doc3
+])
+query = np.array([1, 1, 0])
+
+print(docs @ query)    # [2 0 1]The reason is that doc4 = [5, 5, 5] is just doc1 = [1, 1, 1] scaled up.
+ Both point in exactly the same direction, meaning the same topics in the same proportions. 
+The dot product rewards a vector’s length as well as its direction, 
+so a long document that repeats itself beats a short, equally relevant one.
+
+Real systems fix this with cosine similarity, which divides the dot product by the lengths of both vectors.
+ That cancels the size and leaves only the direction:
+
+def cosine(a, b):
+    return (a @ b) / (np.linalg.norm(a) * np.linalg.norm(b))
+
+np.linalg.norm(a) is the vector’s length. Most embedding search in RAG uses this or an equivalent.
+
+
+import pandas as pd
+
+df = pd.DataFrame({
+    "name":  ["Ali", "Sara", "Omar", "Zain"],
+    "score": [72, 91, 40, 95],
+})
+
+print(df["score"].mean())             # average of a column: 74.5
+print(df[df["score"] >= 90])          # filter: only rows where the score is 90+
+print(df[df["score"] >= 90]["name"])  # then pick the name column
+df.to_csv("scores.csv", index=False)  # save to a file
+df2 = pd.read_csv("scores.csv")       # load it back
