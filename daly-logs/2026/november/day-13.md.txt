@@ -12,4 +12,10 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random
 model = LinearRegression()
 model.fit(X_train, y_train)          # training: finds the best w (and a constant)
 print(model.predict([[9]]))          # prediction for a house of size 9
-print(model.score(X_test, y_test))   # how well it does on unseen data (1.0 = perfect)
+print(model.score(X_test, y_test))   # how well it does on unseen data (1.0 = perfect)Classification and why accuracy can lie
+
+Regression predicts a number, such as a price. Classification predicts a category, such as spam or not spam, or fraud or not fraud. The obvious score is accuracy, the share of predictions that are correct, but it can badly mislead you.
+
+Real example: a bank has 1,000 transactions, and 10 are fraud. A lazy “model” that always says “not fraud” is right 990 times, so its accuracy is 99%. It has also caught zero fraud, which makes it useless.
+
+Two metrics fix this. Call a case a true positive when the model flagged it and it really was the thing you’re hunting (spam, fraud).

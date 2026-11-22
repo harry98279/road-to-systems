@@ -1,0 +1,32 @@
+from sklearn.datasets import load_breast_cancer
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+
+X, y = load_breast_cancer(return_X_y=True)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
+
+tree = DecisionTreeClassifier()                 # no depth limit
+tree.fit(X_train, y_train)
+print(tree.score(X_train, y_train))             # 1.0
+print(tree.score(X_test, y_test))               # about 0.93
+
+forest = RandomForestClassifier(n_estimators=100)
+forest.fit(X_train, y_train)
+print(forest.score(X_test, y_test))             # about 0.96
+
+from sklearn.datasets import load_breast_cancer
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.tree import DecisionTreeClassifier
+
+X, y = load_breast_cancer(return_X_y=True)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
+
+params = {"max_depth": [2, 3, 5, 10, None]}
+search = GridSearchCV(DecisionTreeClassifier(), params, cv=5)
+search.fit(X_train, y_train)
+
+print(search.best_params_)
+print(search.score(X_test, y_test))
+
+
