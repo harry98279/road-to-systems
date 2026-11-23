@@ -1,0 +1,72 @@
+today is 15 days ,thats a milestone worth celebrating because before starting this journey i was feeeling lost but now
+i learn something daily with consistency i might achieve something .
+thats all .
+
+for today i will be learning unspervised learning and knn k-means
+So far every dataset had labels: the true price, or spam/not spam. That’s supervised learning. 
+Unsupervised learning has no labels, and the model looks for structure on its own.
+
+K-means clustering groups similar points together:
+
+Pick k (say 3) random center points.
+Assign every data point to its nearest center.
+Move each center to the average of the points assigned to it.
+Repeat steps 2 and 3 until the centers stop moving.
+
+A real use is grouping customers into segments from their behavior, with no one telling the model what the segments are.
+
+KNN (k-nearest neighbors) is supervised. To classify a new point, it looks at the k closest labeled points and takes a vote.
+
+ It’s the “similar things get similar answers” idea behind vector search in RAG.
+
+
+from sklearn.cluster import KMeans
+from sklearn.neighbors import KNeighborsClassifier
+import numpy as np
+
+points = np.array([[1, 1], [1, 2], [2, 1], [8, 8], [8, 9], [9, 8]])
+
+km = KMeans(n_clusters=2, n_init=10, random_state=42).fit(points)
+print(km.labels_)         # e.g. [0 0 0 1 1 1]: two groups found without any labels
+
+labels = [0, 0, 0, 1, 1, 1]
+knn = KNeighborsClassifier(n_neighbors=3).fit(points, labels)
+print(knn.predict([[2, 2]]))   # [0]
+
+
+
+A neuron is a dot product plus a bend.
+z = w · x + b          (dot product of weights and inputs, plus a bias)
+output = activation(z)x is the input vector, w is the weights the neuron learns, and b is the bias, a number added at the end.
+You’ve already done w · x with NumPy.
+Activation function: without it, stacking neurons would just be one big linear function.
+The most common one is ReLU: ReLU(z) = max(0, z), which passes positive values through and turns negative values into 0.
+A network is layers of these neurons, where the outputs of one layer become the inputs of the next. 
+Training is the gradient descent you already did by hand, adjusting every w and b to shrink the loss.
+
+starting to learn pytorch also .
+
+
+import torch
+
+w = torch.tensor(0.0, requires_grad=True)   # a weight PyTorch should track
+lr = 0.01
+
+for step in range(100):
+    loss = (w * 2 - 6) ** 2        # same loss as before
+    loss.backward()                # computes the slope, stored in w.grad
+    with torch.no_grad():          # pause tracking while we update w
+        w -= lr * w.grad           # the update step
+    w.grad.zero_()                 # clear the slope, or it piles up
+
+print(w)    # close to 3
+
+thats it for today 
+
+
+
+
+
+
+
+
