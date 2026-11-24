@@ -1,0 +1,36 @@
+tokens and embeddings.
+
+
+tokenization.
+splits texts into pieces called tokens,and give each piece an id number, a token is a word or part of 
+a word.
+"I love unbelievable cats"
+  ->  ["I", " love", " un", "believ", "able", " cats"]
+  ->  [40, 3021, 555, 12879, 540, 8415]      (example IDs)
+
+embeddings : turns each token into a vector  , a list of number , the model learns these model during training,
+so that words with similar meaning end up with vector pointing in similar direction .
+
+cat   = [0.8, 0.1, 0.3]
+dog   = [0.7, 0.2, 0.3]
+car   = [0.1, 0.9, 0.0]Consider the sentence: “The animal didn’t cross the street because it was tired.” To understand “it”, the model has to look back at the other words and work out that “it” means “animal”. Attention is the mechanism that does this looking back.
+
+The idea in three steps:
+
+Score: compare the current word with every other word (using the dot product you already know). A high score means “relevant”.
+Softmax: turn the scores into weights that are positive and add up to 1, just like the probabilities from earlier (0.6 + 0.3 + 0.1). Bigger scores get bigger weights.
+Blend: mix the other words’ vectors using those weights. The result is a new vector for the current word, shaped mostly by the words it paid most attention to.
+
+The formula for step 3:
+
+output = weight₁ × vector₁ + weight₂ × vector₂ + ...
+
+Worked example: the word “it” pays attention to two words.
+
+weights:  animal = 0.7,  street = 0.3
+vectors:  animal = [1, 0],  street = [0, 1]
+
+output = 0.7 × [1, 0] + 0.3 × [0, 1]
+       = [0.7, 0] + [0, 0.3]
+       = [0.7, 0.3]
+
