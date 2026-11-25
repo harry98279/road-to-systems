@@ -1,0 +1,14 @@
+today working on a neural network project will document that in a machine learning folder
+with readme file and code file.
+
+
+with that also learning about :
+
+
+1. Ingest:   split your documents into small chunks, embed each chunk, store the vectors
+2. Retrieve: embed the user's question, find the chunks with the highest cosine similarity
+3. Generate: prompt = "Answer using only this context: <top chunks>  Question: <question>"
+Context window: 500 pages may not fit into the model’s token limit at all.
+Cost and speed: you pay per token, and more tokens means a slower reply.
+Accuracy: a few relevant paragraphs lead to better answers than hundreds of irrelevant pages,
+where the model can miss or mix up details.
