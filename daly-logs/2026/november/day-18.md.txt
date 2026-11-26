@@ -1,0 +1,8 @@
+todays learning >
+
+learning to build a mini rag system .
+
+first chunking the data 
+then converting it into vectors ,
+then retrive : embed the question ,score very chunk and take 2 best chunk>
+send: build the prompt you would send to an llm .
