@@ -1,0 +1,15 @@
+todyas learning;
+
+1. Hybrid search. Embeddings find chunks with the same meaning, but they can miss exact terms like an error code,
+ a product name or “ERR-4021”. Keyword search (such as BM25) finds exact words but misses paraphrases. 
+ Hybrid search runs both and merges the results.
+
+2. Reranking. Retrieval is fast but rough. A common pattern is to fetch the top 20 chunks cheaply, 
+then have a slower, more accurate reranker model re-score just those 20 against the question, 
+and keep the best 3 for the prompt. Fast filtering followed by careful ranking.
+
+3. Evaluation. You can’t improve a RAG system you can’t measure. 
+You build a small test set of questions with known answers and check two things separately:
+
+Retrieval: did the right chunk appear in the top results? (This is recall, the metric from earlier, applied to chunks.)
+Generation: is the answer faithful to the retrieved text, with nothing invented?
